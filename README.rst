@@ -19,8 +19,6 @@ A Note on Installing lxml
 While lxml is not a requirement, I have had a hard time installing lxml in the
 past.  I have found this set of commands to work perfectly:
 
-.. sourcecode:: bash
-
     STATIC_DEPS=true easy_install 'lxml>=2.2beta4'
     STATIC_DEPS=true sudo easy_install 'lxml>=2.2beta4'
 
@@ -55,22 +53,16 @@ Using the NZB Parser
 If you're using a specific parser, like the ``ETreeNZBParser``, you will first
 have to instantiate it:
 
-.. sourcecode:: python
-
     nzb_parser = ETreeNZBParser()
 
 
 Otherwise, you can just import the default parser for your system:
-
-.. sourcecode:: python
 
     from pynzb import nzb_parser
 
 
 Then, simply call the ``parse`` method, giving it the xml string as the only
 argument:
-
-.. sourcecode:: python
 
     files = nzb_parser.parse('<?xml ... my nzb file here ... </nzb>')
 
@@ -124,8 +116,6 @@ Example
 
 In this example, we will grab an Ubuntu NZB and parse the file, printing out
 some information about each file and its segments.
-
-.. sourcecode:: python
 
     from pynzb import nzb_parser
     from urllib2 import urlopen
